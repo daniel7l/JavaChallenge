@@ -53,7 +53,7 @@ public class Controller {
 
         if(graph != null) {
             if(maxStops == null)
-                maxStops = Long.valueOf(graph.getVertices().size());
+                maxStops = (long) graph.getVertices().size();
 
             Path path = new Path();
             return path.traceRoutes(graph.getVertice(town1), graph.getVertice(town2), graph, maxStops);

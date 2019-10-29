@@ -7,7 +7,6 @@ import com.danhost.entity.repository.VerticeRepository;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Entity
@@ -20,69 +19,44 @@ public class Graph
     private long id;
 
     @OneToMany
-    private List<Vertice> vertices = new ArrayList<Vertice>();
+    private List<Vertex> vertices = new ArrayList<>();
 
     @OneToMany
-    private List<Aresta> arestas = new ArrayList<Aresta>();
+    private List<Edge> edges = new ArrayList<>();
 
     public Graph() {
     }
 
-    public Graph(List<Vertice> vertices, List<Aresta> arestas) {
-        this.vertices = vertices;
-        this.arestas = arestas;
-    }
-
-    public long getId() {
+    private long getId() {
         return id;
     }
 
-    public List<Vertice> getVertices() {
+    public List<Vertex> getVertices() {
         return vertices;
     }
 
-    public List<Aresta> getArestas() {
-        return arestas;
-    }
-
-
-    public void setVertices(List<Vertice> vertices) {
-        this.vertices = vertices;
-    }
-
-    public void setArestas(List<Aresta> arestas) {
-        this.arestas = arestas;
-    }
-
-
-
-    public Vertice addVertice(String nome)
+    public Vertex addVertex(String name)
     {
-        Vertice v = new Vertice(nome);
+        Vertex v = new Vertex();
+        v.setName(name);
         vertices.add(v);
         return v;
     }
 
-    public Aresta addAresta(Vertice origem, Vertice destino, int dist)
+    public Edge addAresta(Vertex origem, Vertex destino, int dist)
     {
-        Aresta a = new Aresta(origem,destino, dist);
+        Edge a = new Edge(origem,destino, dist);
         origem.addAdj(a);
-        arestas.add(a);
+        edges.add(a);
         return a;
     }
 
-    public Vertice getVertice(String name)
+    public Vertex getVertice(String name)
     {
-        for(Iterator iterator = vertices.iterator(); iterator.hasNext();) {
-            Vertice v = (Vertice) iterator.next();
-            if(name.equals(v.nome))
+        for(Vertex v : vertices){
+            if(name.equals(v.name))
                 return v;
         }
-
-        /*for(int i = 0 ; i < vertices.size(); i++)
-            if(vertices.get(i).nome == name)
-                return vertices.get(i);*/
-
         return null;
     }
 
@@ -94,15 +68,15 @@ public class Graph
 
         for(int i = 0 ; i < body.data.length ; i++)
         {
-            Vertice source  = g.getVertice(body.data[i].source);
+            Vertex source  = g.getVertice(body.data[i].source);
             if(source == null) {
-                source = g.addVertice(body.data[i].source);
+                source = g.addVertex(body.data[i].source);
                 verticeRepository.save(source);
             }
 
-            Vertice target = g.getVertice(body.data[i].target);
+            Vertex target = g.getVertice(body.data[i].target);
             if(target == null) {
-                target = g.addVertice(body.data[i].target);
+                target = g.addVertex(body.data[i].target);
                 verticeRepository.save(target);
             }
 
@@ -116,9 +90,9 @@ public class Graph
         GraphPayload graphPayload = new GraphPayload();
         graphPayload.setId(graph.getId());
 
-        for(Vertice v : vertices) {
-            for (Aresta a : v.adj){
-                GraphPayload.GraphData data = new GraphPayload.GraphData(a.getSource().getNome(), a.getTarget().getNome(), a.getDistance());
+        for(Vertex v : vertices) {
+            for (Edge a : v.adj){
+                GraphPayload.GraphData data = new GraphPayload.GraphData(a.getSource().getName(), a.getTarget().getName(), a.getDistance());
                 graphPayload.getData().add(data);
             }
 

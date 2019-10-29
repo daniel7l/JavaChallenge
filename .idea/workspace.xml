@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbf6d073-f75e-4ec6-8a64-dc9df780247c" name="Default Changelist" comment="" />
+    <list default="true" id="fbf6d073-f75e-4ec6-8a64-dc9df780247c" name="Default Changelist" comment="Commit#2">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/cotroller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/cotroller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Aresta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Vertice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/entity/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/entity/repository/ArestaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/entity/repository/ArestaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/entity/repository/VerticeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/entity/repository/VerticeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/models/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/models/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/models/GraphPayload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/models/GraphPayload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/models/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/models/Path.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/danhost/models/PathDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/danhost/models/PathDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SetupTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SetupTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/JavaChallenge.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/cotroller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/cotroller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/entity/Aresta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/entity/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/entity/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/entity/Vertice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/entity/repository/ArestaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/entity/repository/ArestaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/entity/repository/VerticeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/entity/repository/VerticeRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/models/Dijkstra.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/models/Dijkstra.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/models/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/models/Path.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/danhost/models/PathDistance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/danhost/models/PathDistance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/JavaChallenge.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SetupTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SetupTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Test9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Test9.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +62,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -45,9 +81,10 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WesterosRoutes-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -80,13 +117,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test6 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JavaChallenge" />
+    <configuration name="All in java-challenge-ac001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-challenge-ac001" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-vintage]/[runner:Test6]" />
-      </uniqueIds>
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in java-challenge-ac001" />
         <item itemvalue="JUnit.All in JavaChallenge" />
         <item itemvalue="JUnit.Test8" />
         <item itemvalue="JUnit.Test7" />
         <item itemvalue="JUnit.Test6" />
-        <item itemvalue="JUnit.Test6 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -153,11 +187,30 @@
       <workItem from="1569941876462" duration="749000" />
       <workItem from="1570564545383" duration="2997000" />
       <workItem from="1571345674442" duration="50315000" />
+      <workItem from="1571946497275" duration="1159000" />
+      <workItem from="1572381708925" duration="4184000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit#2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit#2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

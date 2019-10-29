@@ -1,28 +1,22 @@
 package com.danhost.models;
 
 import com.danhost.entity.Graph;
-import com.danhost.entity.Vertice;
+import com.danhost.entity.Vertex;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dijkstra {
 
-    public List<Vertice> notVisited = new ArrayList<Vertice>();
+    private List<Vertex> notVisited = new ArrayList<>();
 
-    public List<Vertice> shortestPath = new ArrayList<Vertice>();
+    private List<Vertex> shortestPath = new ArrayList<>();
 
-    public Vertice pathVertex = new Vertice();
-
-    public Vertice current = new Vertice();
-
-    public Vertice next = new Vertice();
-
-    public DijkstraPath findShortestPath(Graph g, Vertice start, Vertice end)
+    public DijkstraPath findShortestPath(Graph graph, Vertex start, Vertex end)
     {
         DijkstraPath dPath = new DijkstraPath();
 
-        dijkstra(g, start, end);
+        dijkstra(graph, start, end);
 
         if(shortestPath.size() == 0)
         {
@@ -31,32 +25,32 @@ public class Dijkstra {
         }
 
         for(int i = shortestPath.size() - 1; i >= 0; i--)
-            dPath.getPath().add(shortestPath.get(i).getNome());
+            dPath.getPath().add(shortestPath.get(i).getName());
 
         dPath.setDistance(shortestPath.get(0).getDistance());
 
         return dPath;
     }
 
-    public List<Vertice> dijkstra(Graph g, Vertice start, Vertice end)
+    private void dijkstra(Graph graph, Vertex start, Vertex end)
     {
         if(start == end)
         {
             start.setDistance(0);
             shortestPath.add(start);
-            return shortestPath;
+            return;
         }
 
 
-        initialDistances(g, start);
+        initialDistances(graph, start);
 
         while(!this.notVisited.isEmpty())
         {
-            current = getShortest();
+            Vertex current = getShortest();
 
             for(int i = 0; i < current.getAdj().size(); i++)
             {
-                next = current.getAdj().get(i).getTarget();
+                Vertex next = current.getAdj().get(i).getTarget();
 
                 if(current.getAdj().get(i).isNotVisited()) {
                     if (next.getDistance() > (current.getDistance() + current.getAdj().get(i).getDistance())) {
@@ -68,7 +62,7 @@ public class Dijkstra {
                         if (next == end) {
                             shortestPath.clear();
                             shortestPath.add(next);
-                            pathVertex = next;
+                            Vertex pathVertex = next;
 
                             while (pathVertex.getPrevious() != null) {
                                 shortestPath.add(pathVertex.getPrevious());
@@ -81,14 +75,13 @@ public class Dijkstra {
             }
             this.notVisited.remove(current);
         }
-        return shortestPath;
     }
 
-    public void initialDistances(Graph g, Vertice start)
+    private void initialDistances(Graph g, Vertex start)
     {
         for(int i = 0 ; i < g.getVertices().size(); i++)
         {
-            if(g.getVertices().get(i).getNome().equals(start.getNome()))
+            if(g.getVertices().get(i).getName().equals(start.getName()))
                 g.getVertices().get(i).setDistance(0);
             else
                 g.getVertices().get(i).setDistance(9999);
@@ -97,21 +90,23 @@ public class Dijkstra {
         }
     }
 
-    public Vertice getShortest()
+    private Vertex getShortest()
     {
-        Vertice aux = new Vertice();
-        aux.setDistance(99999);
+        Vertex shortest = new Vertex();
+        shortest.setDistance(99999);
 
-        for(int i = 0 ; i < this.notVisited.size(); i++)
+        //for(int i = 0 ; i < this.notVisited.size(); i++)
+
+        for(Vertex vAux : this.notVisited)
         {
-            if(this.notVisited.get(i).getDistance() < aux.getDistance())
-                aux = this.notVisited.get(i);
+            if(vAux.getDistance() < shortest.getDistance())
+                shortest = vAux;
         }
 
-        return aux;
+        return shortest;
     }
 
-    public class DijkstraPath
+    public static class DijkstraPath
     {
         int distance;
         ArrayList<String> path;
@@ -120,12 +115,8 @@ public class Dijkstra {
             return distance;
         }
 
-        public void setDistance(int distance) {
+        private void setDistance(int distance) {
             this.distance = distance;
-        }
-
-        public void addDistance(int distance) {
-            this.distance += distance;
         }
 
         public ArrayList<String> getPath() {
@@ -137,10 +128,10 @@ public class Dijkstra {
 
         }
 
-        public DijkstraPath()
+        private DijkstraPath()
         {
             this.distance = 0;
-            this.path = new ArrayList<String>();
+            this.path = new ArrayList<>();
         }
 
 

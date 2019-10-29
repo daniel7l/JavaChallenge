@@ -1,6 +1,6 @@
 import com.danhost.MainApplication;
 import com.danhost.models.Dijkstra;
-import com.danhost.entity.Vertice;
+import com.danhost.entity.Vertex;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -16,8 +16,8 @@ public class Test8 extends SetupTest {
 
         setupTestGraph();
 
-        Vertice start = g.getVertice("A");
-        Vertice end = g.getVertice("C");
+        Vertex start = g.getVertice("A");
+        Vertex end = g.getVertice("C");
 
         Dijkstra d = new Dijkstra();
         Dijkstra.DijkstraPath list = d.findShortestPath(g,start,end);

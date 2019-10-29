@@ -1,7 +1,7 @@
 package com.danhost.models;
 
 import com.danhost.entity.Graph;
-import com.danhost.entity.Vertice;
+import com.danhost.entity.Vertex;
 
 import java.util.ArrayList;
 
@@ -29,9 +29,9 @@ public class Path {
         }
     }
 
-    public Path traceRoutes(Vertice start, Vertice end, Graph g, Long maxStops)
+    public Path traceRoutes(Vertex start, Vertex end, Graph g, Long maxStops)
     {
-        r.route += start.nome;
+        r.route += start.name;
 
         if(start == end && r.stops != 0)
         {

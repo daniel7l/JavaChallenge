@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GraphPayload {
 
     public Long id;
-    public ArrayList<GraphData> data = new ArrayList<GraphData>();
+    public ArrayList<GraphData> data = new ArrayList<>();
 
     public static class GraphData {
         public String source;

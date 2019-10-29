@@ -18,11 +18,11 @@ public class SetupTest extends TestCase {
     public void setupTestGraph(){
         //Input graph: AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 
-        g.addVertice("A");
-        g.addVertice("B");
-        g.addVertice("C");
-        g.addVertice("D");
-        g.addVertice("E");
+        g.addVertex("A");
+        g.addVertex("B");
+        g.addVertex("C");
+        g.addVertex("D");
+        g.addVertex("E");
 
         g.addAresta(g.getVertice("A"), g.getVertice("B"), 5);
         g.addAresta(g.getVertice("B"), g.getVertice("C"), 4);
